@@ -52,9 +52,15 @@ img {
 	margin: 0 20px 20px 0;
 }
 
+.cage-wrapper {
+	display: inline-block;
+	margin-bottom: 83px;
+	width: 100%;
+}
+
 .cage {
 	text-align: center;
-	height: 100px;
+	width: 100%;
 }
 
 .nick {
@@ -178,4 +184,13 @@ footer {
 footer p {
 	text-align: center;
 	margin: 20px;
+}
+
+
+@media only screen and (max-width: 640px) {
+
+	.auth-image {
+		width: 100%;
+		margin: 0 0 20px;
+	}
 }
