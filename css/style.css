@@ -1,8 +1,14 @@
 /***** GENERAL *****/
 
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 body {
 	background: #ddd;
 	min-height: 100vh;
+	overflow-y: scroll;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -25,11 +31,16 @@ img {
 	margin-bottom: 30px;
 }
 
+.main-body {
+	margin-bottom: 50px;
+}
+
 
 /***** ABOUT *****/
 
 .main-section {
 	display: inline-block;
+	width: 100%;
 	background: #fff;
 	border: 1px solid #999;
 	padding: 20px;
@@ -41,19 +52,38 @@ img {
 	margin: 0 20px 20px 0;
 }
 
+.cage {
+	text-align: center;
+	height: 100px;
+}
+
+.nick {
+	max-width: 100%;
+	animation: spin 1s linear infinite;
+	animation-play-state: paused;
+}
+
+.nick:hover {
+	animation-play-state: running;
+}
+
+@keyframes spin {
+  100% {transform: rotate(1turn); }
+}
+
 
 /***** PORTFOLIO *****/
 
 .work {
   position: relative;
   float: left;
-  width: 274px;
+  width: 48%;
   margin: 20px 0 25px;
   overflow: auto;
 }
 
 .work:nth-child(even) {
-  margin-right: 40px;
+  margin-right: 2%;
 }
 
 .work img {
@@ -76,19 +106,53 @@ img {
   border-bottom: 0;
 }
 
-.auth-image {
-  float: left;
-  width: 200px;
-  height: auto;
-  margin-top: 10px;
-  margin-right: 25px;
+
+ /***** CONTACT *****/
+
+#contact-form ul {
+  margin-bottom: 20px;
 }
 
+#contact-form li {
+  margin-bottom: 10px;
+}
+
+label,
+input[type=text],
+input[type=email],
+textarea {
+  display: block;
+  width: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  height: 35px;
+  padding: 0 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+}
+
+textarea {
+  height: 200px;
+}
+
+input[type=submit] {
+  padding: 10px 30px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  background: #4aaaa5;
+  border: 0 none;
+}
 
 /***** SIDEBAR/SOCIAL MEDIA *****/
 
 .sidebar {
 	display: inline-block;
+	width: 100%;
+	margin-bottom: 100px;
 	background: #fff;
 	border: 1px solid #999;
 	padding: 20px;
